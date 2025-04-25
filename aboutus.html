@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            width: 100%;
+            background: linear-gradient(135deg,  rgb(152, 54, 185),  white, rgb(216, 67, 132)); 
+            background-size: cover;
+            color: #2741b4;
+        }
+
+        .logo {
+            width: 100px; 
+            height: auto;
+        }
+
+        header {
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px 20px;
+            background: linear-gradient(135deg,  rgb(66, 2, 61),  white, rgb(157, 163, 176)); 
+            background-size: cover;
+            border-bottom: 5px solid #0a0808;
+            font: size 14px;
+        }
+
+        header a {
+            text-decoration: none;
+            margin-right: 15px;
+            color: #333;
+        }
+
+        header a.order {
+            background: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 41px;
+            font-size: xx-large;
+            font-family: Arial;
+            border: 2px solid #333;
+            border-radius: 10px;
+        }
+
+        .about-section {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;           
+        }
+
+        .about-section p {
+            border: 2px solid #333;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .columns {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .columns div {
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .columns img {
+            width: 321px;
+            height: 188px;
+            background-color: #ccc;
+            display: block;
+            margin: 9px auto 10px;
+        }
+
+        .columns h3 {
+            border: 2px solid #333;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .columns button {
+            margin-bottom: -47px;
+            padding: 10px 20px;
+            font-size: 47px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 29px;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            margin-bottom: 1px;
+            bottom: 50%;
+        }
+
+        .contact .icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        
+        .contact .icon svg {
+            width: 200px;
+            height: 200px;
+            fill: darkorange; 
+        }
+
+        .contact .icon button {
+            position: absolute;
+            bottom: -43%;
+            left: 37%;
+            transform: translate(-50%, -50%);
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .contact .icon p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .contact form {
+            flex: 1;
+            text-align: right;
+        }
+
+        .contact form input,
+        .contact form button {
+            width: 55%;
+            margin-bottom: 10px;
+            padding: 14px;
+            font-size: 16px;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            background-color: #aee5f7;
+            border-top: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        footer .footer-content {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        footer .footer-content .left,
+        footer .footer-content .center,
+        footer .footer-content .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        footer .social-icons a {
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+        }
+
+        footer .footer-content .left {
+            justify-content: flex-start;
+        }
+
+        footer .footer-content .center {
+            justify-content: center;
+        }
+
+        footer .footer-content .right {
+            justify-content: flex-end;
+        }
+
+        footer {
+            background-color:#aee5f7;
+            padding: 20px 10px;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .left {
+            text-align: left;
+            flex: 1;
+        }
+        .center {
+            text-align: center;
+            flex: 1;
+        }
+        .right {
+            text-align: right;
+            flex: 1;
+        }
+        footer a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #333;
+        }
+        .social-icons a {
+            font-size: 18px;
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            
+            <img src="tasty logo.jpg" alt="Tasty Logo" class="logo">
+        </div>
+        <nav>
+            <a href="homepage.html">Home</a>
+            <a href="ingredients.html">Menu</a>
+            <a href="order.html">Orders</a>
+            <a href="#">About</a>
+            <a href="reviw.html">Review</a>
+            <a href="order.html" class="order">ORDER</a>
+        </nav>
+    </header>
+
+    <div class="about-section">
+        <h1>About us</h1>
+        <p>Discover Our Passion for Food and Cooking</p>
+    </div>
+
+    <div class="container">
+        <div class="columns">
+            <div>
+                <img src="c:\Users\Thars\Downloads\food receipe images\our team.jpg" alt="Our Team">
+                <h3>Our Team</h3>
+                <p>We are a team of food enthusiasts dedicated to bringing delicious and easy recipes to your kitchen.</p>
+            </div>
+            <div>
+                <img src="c:\Users\Thars\Downloads\food receipe images\mission.jpg" alt="Our Mission">
+                <h3>Our Mission</h3>
+                <p>Our mission is to make cooking fun and accessible for everyone, whether you’re a beginner or an expert chef.</p>
+            </div>
+            <div>
+                <img src="c:\Users\Thars\Downloads\food receipe images\how start.webp" alt="How It All Started">
+                <h3>How It All Started</h3>
+                <p>We started this company in May 2020 with the idea of sharing our love for cooking with the world.</p>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="icon">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2c1.1 0 1.99.9 1.99 2S13.1 6 12 6s-2-.9-2-2 .9-2 2-2zm0 16c1.1 0 1.99.9 1.99 2S13.1 22 12 22s-2-.9-2-2 .9-2 2-2zm0-6c1.1 0 1.99.9 1.99 2S13.1 14 12 14s-2-.9-2-2 .9-2 2-2zm6 2h-2.9c-.36 0-.68.18-.87.49l-1.52 2.45c-.27.42-.74.66-1.23.66H6.62c-.49 0-.96-.24-1.23-.66l-1.52-2.45c-.19-.31-.51-.49-.87-.49H6c-.55 0-1 .45-1 1s.45 1 1 1h12c.55 0 1-.45 1-1s-.45-1-1-1z" />
+                </svg>
+                <button>Contact Us</button>
+            </div>
+            <form>
+                <input type="text" placeholder="Contact number">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Address">
+                <input type="url" placeholder="Link">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="left">
+                &copy; 2024 Your Website. All rights reserved.
+            </div>
+            <div class="center">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </div>
+            <div class="right social-icons">
+                <a href="#" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

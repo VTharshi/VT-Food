@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredients Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 60px;
+            background: linear-gradient(135deg,  rgb(10, 50, 124),  white, rgb(153, 9, 71)); 
+            background-size: cover;
+            color: #2741b4;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px 20px;
+            background: linear-gradient(135deg,  rgb(66, 2, 61),  white, rgb(157, 163, 176)); 
+            background-size: cover;
+            border-bottom: 5px solid #0a0808;
+            font-size: 20px;
+            font-family: Arial;
+        }
+
+        .logo {
+            width: 100px; 
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav .order-button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }    
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .main-heading {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .section {
+            margin: 20px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .food-item {
+            position: relative;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 250px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .food-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ccc;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .details {
+            position: absolute;
+            bottom: 50px;
+            left: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .order-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10; 
+            background-color: black;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .order-button:hover {
+            background-color: #333;
+        }
+
+        .info-text {
+            text-align: center;
+            font-style: italic;
+            margin: 50px;
+            font-size: 30px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f1f1f1;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .footer-left,
+        .footer-center {
+            display: flex;
+            gap: 30px;
+        }
+
+        .footer-center {
+            justify-content: center;
+        }
+
+        .footer-right {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            transition: opacity 0.3s;
+        }
+
+        .social-icons img:hover {
+            opacity: 0.7;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            
+            <img src="tasty logo.jpg" alt="Tasty Logo" class="logo">
+        </div>
+        <nav>
+            <a href="homepage.html">Home</a>
+            <a href="ingredients.html">Menu</a>
+            <a href="order.html">Orders</a>
+            <a href="homepage.html">About</a>
+            <a href="reviw.html">Review</a>
+        </nav>
+    </header>
+
+    <h1 class="main-heading">INGREDIENTS</h1>
+
+    <section class="section">
+        <h2>Home Foods</h2>
+        <div class="food-grid">
+            <div class="food-item">
+                <img src="c:\Users\Thars\Downloads\food receipe images\index.html\friedrice.jpg" alt="Fried Rice">
+                <div class="details">Fried Rice - $10</div>
+                <a href="order.html" class="order-button">Order</a>
+            </div>
+            <div class="food-item">
+                <img src="c:\Users\Thars\Downloads\food receipe images\index.html\noodles.jpg" alt="Noodles">
+                <div class="details">Noodles - $13</div>
+                <a href="order.html" class="order-button">Order</a>
+            </div>
+            <div class="food-item">
+                <img src="c:\Users\Thars\Downloads\food receipe images\index.html\vegetable_stir_fry.jpg" alt="Vegetable Stir-fry">
+                <div class="details">Vegetable Stir-fry - $8</div>
+                <a href="order.html" class="order-button">Order</a>
+            </div>
+            <div class="food-item">
+                <img src="c:\Users\Thars\Downloads\food receipe images\index.html\oatmeal-recipe.jpg" alt="Oatmeal">
+                <div class="details">Oatmeal - $10</div>
+                <a href="order.html" class="order-button">Order</a>
+            </div>
+            <div class="food-item">
+                <img src="c:\Users\Thars\Downloads\food receipe images\index.html\roll.jpg " alt="Roll & Samosa">
+                <div class="details">Roll & Samosa (6 pcs) - $18</div>
+                <a href="order.html" class="order-button">Order</a>
+            </div>
+            <div class="food-item">
+                <img src= "hoppers.jpg" alt="Hoppers">
+                <div class="details">Hoppers (6 pcs) - $20</div>
+                <a href="order.html" class="order-button">Order</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Fast Foods</h2>
+        <div class="food-grid">
+            <div class="food-item">
+                <img src="c:\Users\Thars\Downloads\food receipe images\index.html\pizza.jpg" alt="Pizza">
+                <div class="details">Pizza - $30</div>
+                <a href="order.html" class="order-button">Order</a>
+            </div>
+            <div class="food-item">
+                <img src="c:\Users\Thars\Downloads\food receipe images\index.html\bliss burger.jpg" alt="Bliss Burger">
+                <div class="details">Bliss Burger - $28</div>
+                <a href="order.html" class="order-button">Order</a>
+            </div>
+            <div class="food-item">
+                <img src="c:\Users\Thars\Downloads\food receipe images\index.html\fried chicken.jpg" alt="Fried Chicken">
+                <div class="details">Fried Chicken - $40</div>
+                <a href="order.html" class="order-button">Order</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Desserts</h2>
+        <div class="food-grid">
+            <div class="food-item">
+                <img src="c:\Users\Thars\Downloads\food receipe images\index.html\chocolate cake.jpg" alt="Chocolate Cake">
+                <div class="details">Chocolate Cake - $5</div>
+                <a href="order.html" class="order-button">Order</a>
+            </div>
+            <div class="food-item">
+                <img src="c:\Users\Thars\Downloads\food receipe images\index.html\almond milk with honey.jpg" alt="Almond Milk with Honey">
+                <div class="details">Almond Milk - $6</div>
+                <a href="order.html" class="order-button">Order</a>
+            </div>
+            <div class="food-item">
+                <img src="c:\Users\Thars\Downloads\food receipe images\index.html\cookies and brownies.jpg" alt="Cookies and Brownies">
+                <div class="details">Cookies & Brownies - $7</div>
+                <a href="order.html" class="order-button">Order</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="info-text">
+        <p>Be sure not to miss out on the most popular categories. Enjoy trying them out!</p>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <a href="#">© 2025 Tasty. All rights reserved.</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer-center">
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-right social-icons">
+            <a href="https://www.instagram.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+            <a href="https://www.youtube.com" target="_blank"><img src="data:image/png;base64,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" alt="YouTube"></a>
+    <a href="https://www.twitter.com" target="_blank"><img src=" data:image/jpeg;base64,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"></a>
+        </div>
+    </footer>
+</body>
+</html>

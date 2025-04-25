@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+            background-image: url('two spoon.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .login-form {
+            width: 400px;
+            background: #ffffff73;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgb(0 0 0);
+            text-align: center;
+        }
+
+        .login-form h2 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .login-form button:hover {
+            background-color: #555;
+        }
+
+        .login-form a {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #555;
+            text-decoration: none;
+        }
+
+        .login-form a:hover {
+            text-decoration: underline;
+        }
+
+        .login-form p {
+            margin-top: 10px;
+            font-size: 0.8em;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-form">
+        <h2>Login Form</h2>
+        <form action="login.php" method="POST">
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="text" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Password" name="password" required>
+
+
+            <button type="submit">Login</button>
+        </form>
+        <a href="#">Forgot Your Password?</a>
+
+        <p>By signing up, you agree to our Terms of Service and Privacy Policy.</p>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector("form");
+        const usernameInput = form.querySelector("input[placeholder='Username']");
+        const emailInput = form.querySelector("input[placeholder='Email']");
+        const passwordInput = form.querySelector("input[placeholder='Password']");
+        
+        form.addEventListener("submit", (e) => {
+            e.preventDefault(); // Prevent the form from submitting
+            
+            const username = usernameInput.value.trim();
+            const email = emailInput.value.trim();
+            const password = passwordInput.value.trim();
+            
+            // Basic validation
+            if (!username) {
+                alert("Username is required.");
+                return;
+            }
+            
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+            
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return;
+            }
+            
+            // Simulated success
+            alert(`Login Successful! Welcome, ${username}!`);
+            
+            // Clear the form
+            form.reset();
+        });
+        
+        // Function to validate email
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+    });
+</script>
+
+</body>
+
+</html>
